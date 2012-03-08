@@ -1,0 +1,17 @@
+{
+  "author": "Nicholas Manousos <nmanousos@gmail.com>",
+  "name": "email-existence",
+  "description": "Checks existence of email addresses",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nmanousos/email-existence.git"
+  },
+  "main": "./lib",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
