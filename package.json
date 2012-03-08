@@ -8,7 +8,10 @@
     "url": "git://github.com/nmanousos/email-existence.git"
   },
   "main": "./lib",
-  "dependencies": {},
+  "dependencies": {
+  	"dns": "0.x.x",
+  	"net": "0.x.x"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
