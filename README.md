@@ -18,7 +18,7 @@ dns, net
 
 1.  Check existence:
     ```javascript
-	emailExistence.check('nmanousos123123fd@yahoo.com', function(err,res){
+	emailExistence.check('email@domain.com', function(err,res){
 		console.log('res: '+res);
 	});
     ```	
