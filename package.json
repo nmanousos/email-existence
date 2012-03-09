@@ -13,10 +13,7 @@
       "url" : "http://github.com/nmanousos/email-existence/issues"
     },  
   "main": "./lib",
-  "dependencies": {
-  	"dns": "0.x.x",
-  	"net": "0.x.x"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
