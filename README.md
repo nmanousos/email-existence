@@ -1,4 +1,3 @@
-[![build status](https://secure.travis-ci.org/nmanousos/email-existence.png)](http://travis-ci.org/nmanousos/email-existence)
 # email-existence
 
 Checks existence of email addresses
