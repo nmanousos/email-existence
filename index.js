@@ -1,9 +1,9 @@
 var dns = require('dns'),
 	net = require('net');
 
-exports.check = function (email, callback, timeout) {
+module.exports = function (email, callback, timeout) {
 	timeout = timeout || 5000;
-	if (email.indexOf('@') == -1 || !/^[a-z0-9._%+\-]+$/.test(email.split('@')[0].toLowerCase())) {
+	if (!/^\S+@\S+$/.test(email)) {
 		callback(null, false);
 		return;
 	}
@@ -55,3 +55,6 @@ exports.check = function (email, callback, timeout) {
 		});
 	});
 };
+
+// compatibility
+module.exports.check = module.exports;
