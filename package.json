@@ -8,14 +8,5 @@
     "type": "git",
     "url": "git://github.com/nmanousos/email-existence.git"
   },
-  "bugs" :
-    { "mail" : "",
-      "url" : "http://github.com/nmanousos/email-existence/issues"
-    },
-  "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
-  }
+  "bugs" : "http://github.com/nmanousos/email-existence/issues",
 }
