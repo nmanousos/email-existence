@@ -2,11 +2,23 @@
   "author": "Nicholas Manousos <nmanousos@gmail.com>",
   "name": "email-existence",
   "description": "Checks existence of email addresses",
-  "keywords": ["email", "existence", "validation", "validator"],
+  "keywords": [
+    "email",
+    "existence",
+    "validation",
+    "validator"
+  ],
   "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/nmanousos/email-existence.git"
   },
-  "bugs" : "http://github.com/nmanousos/email-existence/issues",
+  "bugs": "http://github.com/nmanousos/email-existence/issues",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.9.0"
+  }
 }
