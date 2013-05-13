@@ -12,7 +12,6 @@
     { "mail" : "",
       "url" : "http://github.com/nmanousos/email-existence/issues"
     },
-  "main": "./lib",
   "dependencies": {},
   "devDependencies": {},
   "optionalDependencies": {},

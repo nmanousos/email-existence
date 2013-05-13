@@ -1,4 +1,4 @@
-var emailExistence = require('./lib/index.js');
+var emailExistence = require('..');
 
 emailExistence.check('test@domain.com', function(err,res){
     if(!err){
