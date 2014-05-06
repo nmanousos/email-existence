@@ -1,5 +1,6 @@
 var dns = require('dns'),
-	net = require('net');
+    net = require('net'),
+    os = require('os');
 
 module.exports = function (email, callback, timeout) {
 	timeout = timeout || 5000;
@@ -28,7 +29,7 @@ module.exports = function (email, callback, timeout) {
 			conn.on('prompt', function () {
 				if(i < 3){
 					conn.write(commands[i]);
-					conn.write('\n');
+					conn.write(os.EOL);
 					i++;
 				} else {
 					callback(err, true);
