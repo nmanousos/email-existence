@@ -34,12 +34,14 @@ module.exports = function (email, callback, timeout) {
 				} else {
 					callback(err, true);
 					conn.removeAllListeners();
+					conn.destroy(); //destroy socket manually
 				}
 			});
 			conn.on('undetermined', function () {
 				//in case of an unrecognisable response tell the callback we're not sure
 				callback(err, false, true);
 				conn.removeAllListeners();
+				conn.destroy(); //destroy socket manually
 			});
 			conn.on('timeout', function () {
 				conn.emit('undetermined');
