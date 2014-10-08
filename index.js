@@ -2,8 +2,9 @@ var dns = require('dns'),
     net = require('net'),
     os = require('os');
 
-module.exports = function (email, callback, timeout) {
+module.exports = function (email, callback, timeout, from_email) {
 	timeout = timeout || 5000;
+	from_email = from_email || email;
 	if (!/^\S+@\S+$/.test(email)) {
 		callback(null, false);
 		return;
@@ -14,7 +15,7 @@ module.exports = function (email, callback, timeout) {
 			return;
 		}
 		var conn = net.createConnection(25, addresses[0].exchange);
-		var commands = [ "helo " + addresses[0].exchange, "mail from: <"+email+">", "rcpt to: <"+email+">" ];
+		var commands = [ "helo " + addresses[0].exchange, "mail from: <"+from_email+">", "rcpt to: <"+email+">" ];
 		var i = 0;
 		conn.setEncoding('ascii');
 		conn.setTimeout(timeout);
