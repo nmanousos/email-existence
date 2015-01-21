@@ -73,10 +73,19 @@ describe('emailExistence', function() {
 
     it('fails on non-existent name', function(done) {
         this.timeout(30e3);
-        emailExistence('aaa@b.com', function(err, valid) {
+        emailExistence('shouldnotexists@gmail.com', function(err, valid) {
             if (err) return done(err);
             expect(valid).to.be(false);
             done();
         });
+    });
+
+    it('recognizes valid hotmail', function(done) {
+      this.timeout(30e3);
+      emailExistence('and285@hotmail.com', function(err, valid) {
+        if (err) return done(err);
+        expect(valid).to.be(true);
+        done();
+      });
     });
 });
