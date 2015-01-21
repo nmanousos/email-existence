@@ -30,7 +30,7 @@ module.exports = function (email, callback, timeout, from_email) {
 			conn.on('prompt', function () {
 				if(i < 3){
 					conn.write(commands[i]);
-					conn.write(os.EOL);
+					conn.write('\r\n');
 					i++;
 				} else {
 					callback(err, true);
