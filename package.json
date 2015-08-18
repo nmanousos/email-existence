@@ -1,5 +1,8 @@
 {
   "author": "Nicholas Manousos <nmanousos@gmail.com>",
+  "contributors": [
+    "scippio <scippio@2ants.eu>"
+  ],
   "name": "email-existence",
   "description": "Checks existence of email addresses",
   "keywords": [
@@ -8,14 +11,14 @@
     "validation",
     "validator"
   ],
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nmanousos/email-existence.git"
+    "url": "https://github.com/scippio/email-existence.git"
   },
-  "bugs": "http://github.com/nmanousos/email-existence/issues",
+  "bugs": "http://github.com/scippio/email-existence/issues",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter spec"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
