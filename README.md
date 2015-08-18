@@ -16,9 +16,10 @@ A valid email address to check the existence of. Use [node-validator](https://gi
 
 *  Check existence:
 	```
-		emailExistence.check('email@domain.com', function(err,res){
+		emailExistence.check('email@domain.com', function(response,error){
 			console.log('res: '+res);
 		});
 	```
 
-* The check function will return a boolean to indicate existence of an email address. Existence is determined by telnetting to the MX server of the email domain and attempting to send an email to the supplied address. MX servers return 250 if the email address exists and 550 if it does not. This test email is not ever sent.
+* The check function will return a boolean in response callback function to indicate existence of an email address. Existence is determined by telnetting to the MX server of the email domain and attempting to send an email to the supplied address. MX servers return 250 if the email address exists and 550 if it does not. This test email is not ever sent.
+* The second callback parameter return error info or returned data.
