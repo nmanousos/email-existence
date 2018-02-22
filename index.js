@@ -6,10 +6,22 @@ var dns = require('dns'),
 module.exports = function (email, callback, timeout, from_email) {
 	timeout = timeout || 5000;
 	from_email = from_email || email;
+
+	/* Does it look like a valid email? */
+
+	/* Our email regex is vulnerable to REDOS on very large input.
+	 *  Valid emails shouldn't be more than 300 characters anyway.
+	 *  https://www.rfc-editor.org/errata_search.php?eid=1690 */
+	const MAX_EMAIL_LEN = 300;
+	if (MAX_EMAIL_LEN < email.length) {
+		callback(null, false);
+		return;
+	}
 	if (!/^\S+@\S+$/.test(email)) {
 		callback(null, false);
 		return;
 	}
+
 	dns.resolveMx(email.split('@')[1], function(err, addresses){
 		if (err || addresses.length === 0) {
 			callback(err, false);
