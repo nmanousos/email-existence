@@ -25,6 +25,6 @@
     "mocha": "~1.9.0"
   },
   "dependencies": {
-    "async": "^2.0.0-rc.6"
+    "async": "^2.6.1"
   }
 }
