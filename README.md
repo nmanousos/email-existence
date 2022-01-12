@@ -12,6 +12,9 @@ To install via npm:
 
 A valid email address to check the existence of. Use [node-validator](https://github.com/chriso/node-validator) to check validity.
 
+Port 25 being allowed for outbound traffic. Digital Ocean in particular blocks that port by default. Check with your hosting provider.
+If the port is blocked, all emails will report as invalid.
+
 ## Usage
 
 *  Check existence:
